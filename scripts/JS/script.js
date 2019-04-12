@@ -7,8 +7,8 @@ app.displayMovie = (movieList) => {
   $('section').empty();
   movieList.forEach((movie) => {
     console.log(movie.title);
-    const movieHtml = `<div>
-                      <h2> ${movie.title}</h2>
+    const movieHtml = `<div class="well well-sm">
+                      <h2>${movie.title}</h2>
                       <p>Release Date : ${movie.release_date}<p>
                       <p>Language : ${movie.original_language}
                       <p>Overview : ${movie.overview}</p>
@@ -18,7 +18,7 @@ app.displayMovie = (movieList) => {
                       <div class="progress progress-striped active">
                       <div class=progress-bar style="width: ${movie.popularity*2}%">popularity</div>
                       </div>`;
-    $('section').append(movieHtml);
+      $('section').append(movieHtml);
   })
 }
 
