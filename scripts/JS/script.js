@@ -16,7 +16,7 @@ app.displayMovie = (movieList) => {
                       <img src=https://image.tmdb.org/t/p/w185/${movie.poster_path} alt="">
                       </br>
                       <div class="progress progress-striped active">
-                      <div class=progress-bar style="width: ${movie.popularity}%">popularity</div>
+                      <div class=progress-bar style="width: ${movie.popularity*2}%">popularity</div>
                       </div>`;
     $('section').append(movieHtml);
   })
