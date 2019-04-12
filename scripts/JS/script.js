@@ -3,9 +3,9 @@ const app = {};
 app.key = '2b14ef1e447db99d2e8042b8470f960b';
 
 app.displayMovie = (movieList) => {
-  console.log(movieList)
+  // console.log(movieList)
+  $('section').empty();
   movieList.forEach((movie) => {
-    $('section').empty;
     console.log(movie.title);
     const movieHtml = `<div>
                       <h2> ${movie.title}</h2>
@@ -14,8 +14,9 @@ app.displayMovie = (movieList) => {
                       <p>Overview : ${movie.overview}</p>
                       </br>
                       <img src=https://image.tmdb.org/t/p/w185/${movie.poster_path} alt="">
-                      <div className="progress progress-striped active">
-                      <div className=progress-bar style="width: ${movie.poularity}%"></div>
+                      </br>
+                      <div class="progress progress-striped active">
+                      <div class=progress-bar style="width: ${movie.popularity}%">popularity</div>
                       </div>`;
     $('section').append(movieHtml);
   })
